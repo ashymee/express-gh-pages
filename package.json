@@ -8,15 +8,25 @@
   },
   "private": true,
   "scripts": {
-    "build": "tsc",
+    "clean": "rimraf build/",
+    "tsc": "tsc",
+    "copy-assets": "ts-node src/tools/copyAssets",
+    "serve": "nodemon build/main.js",
+    "build": "npm-run-all clean tsc copy-assets",
+    "dev": "npm-run-all build serve",
     "start": "node build/main.js"
   },
   "dependencies": {
+    "dotenv": "^10.0.0",
     "express": "^4.17.1"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
+    "@types/shelljs": "^0.8.9",
     "gh-pages": "^3.2.3",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "shelljs": "^0.8.4",
     "ts-node": "^10.1.0",
     "typescript": "^4.3.5"
   },
