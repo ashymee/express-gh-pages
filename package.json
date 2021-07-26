@@ -1,0 +1,34 @@
+{
+  "name": "turn-me-on",
+  "version": "1.0.0",
+  "author": {
+    "name": "Aswin Sahlan Himawan",
+    "email": "ashymee@gmail.com",
+    "url": "https://devstreetlab.my.id"
+  },
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/main.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3",
+    "ts-node": "^10.1.0",
+    "typescript": "^4.3.5"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
